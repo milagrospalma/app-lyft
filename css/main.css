@@ -1,0 +1,46 @@
+body {
+	font-family: 'Raleway', sans-serif !important;
+}
+
+/* Splash */
+
+.gradient {
+  background: linear-gradient(rgb(0, 0, 0) 1%, rgb(249,0,152));
+}
+
+.container-flex-column {
+  display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 2em;
+}
+
+.high {
+	height: 100vh;
+}
+
+/* Register */
+
+.bg-night {
+	background-image: url('../assets/images/night.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 100vh;
+}
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.container-flex-row {
+  display: flex;
+	justify-content: center;
+}
+
+.btn-white {
+	border: 0.12em solid #FFFFFF;
+	color: #FFFFFF;
+	padding: 1em;
+	margin: 0.1em;
+	font-weight: bold;
+}
