@@ -11,6 +11,38 @@
     <link rel="stylesheet" href="../css/main.css">
   </head>
   <body>
+    <main>
+      <div class="container-flex-column">
+        <div class="container-flex-row">
+          <a href="register.html" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+          </a>
+        </div>
+        <h1>Sign Up</h1>
+        <p>Join now for the ride credit</p>
+        <hr>
+        <form class="sign-up" method="post">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Country
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu auto-size" aria-labelledby="dropdownMenu1">
+              <li><a href="#"><img class="img-icon" src="../assets/icons/peru.ico" alt="Perú"></a></li>
+              <li><a href="#"><img class="img-icon" src="../assets/icons/chile.ico" alt="Chile"></a></li>
+              <li><a href="#"><img class="img-icon" src="../assets/icons/mexico.ico" alt="México"></a></li>
+            </ul>
+          </div>
+          <div class="form-group">
+          <input type="text" class="form-control" placeholder="Phone">
+        </div>
+        <p>We'll send a text to verify your phone</p>
+        <a href="#" class="btn btn-default">NEXT</a>
+        </form>
+      </div>
+    </main>
+
+
     <!-- Import jQuery -->
     <script type="text/javascript" src="../vendors/jquery/jquery-3.2.1.min.js"></script>
     <!-- Import Bootstrap JS -->

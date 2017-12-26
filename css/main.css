@@ -1,3 +1,9 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Raleway', sans-serif !important;
 }
@@ -43,4 +49,14 @@ body {
 	padding: 1em;
 	margin: 0.1em;
 	font-weight: bold;
+}
+
+/* Sign up */
+
+.dropdown-menu {
+	min-width: 25vw;
+}
+
+.img-icon {
+	width: 5vh;
 }
