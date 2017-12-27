@@ -11,7 +11,7 @@ body {
 /* Splash */
 
 .gradient {
-  background: linear-gradient(rgb(0, 0, 0) 1%, rgb(249,0,152));
+  background: linear-gradient(rgb(109, 22, 101) 30%, rgb(238, 0, 151) 80%);
 }
 
 .container-flex-column {
