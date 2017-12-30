@@ -28,14 +28,14 @@
             <span class="input-group-addon">
               <span class="glyphicon glyphicon-lock"></span>
             </span>
-            <input type="text" class="form-control" placeholder="First name" aria-describedby="basic-addon1">
-            <input type="text" class="form-control" placeholder="Last name" aria-describedby="basic-addon1">
+            <input id="firstName" type="text" class="form-control" placeholder="First name" aria-describedby="basic-addon1">
+            <input id="lastName" type="text" class="form-control" placeholder="Last name" aria-describedby="basic-addon1">
           </div>
           <div class="input-group">
             <span class="input-group-addon">
               <span class="glyphicon glyphicon-envelope"></span>
             </span>
-            <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+            <input type="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
           </div>
           <div class="row">
             <div class="col-lg-6">
@@ -47,7 +47,7 @@
               </div>
             </div>
           </div>
-          <a href="validated.html" class="btn btn-default">NEXT</a>
+          <button id="btnNext" type="button" class="btn btn-default" disabled>NEXT</button>
         </form>
       </div>
     </main>
@@ -56,6 +56,6 @@
     <!-- Import Bootstrap JS -->
     <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
     <!-- app.js -->
-    <script type="text/javascript" src="../js/sign-up.js"></script>
+    <script type="text/javascript" src="../js/inspected.js"></script>
   </body>
 </html>
