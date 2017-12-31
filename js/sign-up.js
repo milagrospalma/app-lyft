@@ -5,7 +5,7 @@ $(document).ready(function() {
   var $option = $('li');
 
   // Declarando variables
-  var MINLENGTH = 9;
+  var MINLENGTH = 10;
   var index = 0;
   var validatedPhone = false;
   var lengthOfPostalCode = 0;
