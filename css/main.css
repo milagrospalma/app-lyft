@@ -8,10 +8,14 @@ body {
 	font-family: 'Raleway', sans-serif !important;
 }
 
-/* Splash */
+/* Clases reutilizables */
 
 .gradient {
   background: linear-gradient(rgb(109, 22, 101) 30%, rgb(238, 0, 151) 80%);
+}
+
+.high {
+	height: 100vh;
 }
 
 .container-flex-column {
@@ -21,11 +25,39 @@ body {
 	padding: 2em;
 }
 
-.high {
-	height: 100vh;
+.flex-item {
+	display: flex;
+	justify-content: flex-end;
 }
 
-/* Register */
+.container-flex-row {
+  display: flex;
+	justify-content: space-around;
+}
+
+.back-button {
+	font-size: 1.5em;
+	color: #E719BB;
+}
+
+.next-button {
+	background-color: #ED1F96;
+	color: #FFFFFF;
+	font-weight: bold;
+	width: 100%;
+	padding: 0.8em;
+	margin: 1em 0;
+}
+
+.btn-padding {
+	padding: 1px 12px;
+}
+
+.group-container {
+	margin: 1em 0;
+}
+
+/* Home */
 
 .bg-night {
 	background-image: url('../assets/images/night.jpg');
@@ -38,22 +70,21 @@ body {
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
-.container-flex-row {
-  display: flex;
-	justify-content: center;
-}
-
 .btn-white {
-	border: 0.12em solid #FFFFFF;
+	border: 0.1em solid #FFFFFF;
 	color: #FFFFFF;
 	padding: 1em;
-	margin: 0.1em;
-	font-weight: bold;
+}
+
+/* Log In*/
+
+.centered-text {
+	text-align: center;
 }
 
 /* Sign up */
 
-.dropdown-menu {
+.box-size {
 	min-width: 25vw;
 }
 

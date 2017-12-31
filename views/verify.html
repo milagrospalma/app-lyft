@@ -12,26 +12,35 @@
     <!-- main.css -->
     <link rel="stylesheet" href="../css/main.css">
   </head>
-  <body>
-    <main>
-      <div class="container-flex-column">
-        <div class="container-flex-row">
-          <a href="sign-up.html" type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-          </a>
-        </div>
-        <h1>Verify phone number</h1>
-        <h4>Join now for free ride credit</h4>
-        <form class="" action="index.html" method="post">
-          <div class="input-group">
-            <span class="input-group-addon">
-              <span>LAB - </span>
-            </span>
-            <input type="number" class="form-control" placeholder="code" aria-describedby="basic-addon1">
+  <body class="high">
+    <main class="hidden-xs">
+      <!-- Botón de regreso -->
+      <div class="return-button">
+        <a href="sign-up.html" type="button" class="btn back-button">
+          <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+        </a>
+      </div>
+      <!-- Contenido de la vista Verify -->
+      <div class="container-flex-column centered-text">
+        <h3>Verify phone number</h3>
+        <h5>Join now for free ride credit</h5>
+        <hr>
+        <form>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-offset-2 col-xs-8">
+                <div class="input-group group-container">
+                  <span class="input-group-addon">
+                    <span>LAB - </span>
+                  </span>
+                  <input type="number" class="form-control" placeholder="Code" aria-describedby="basic-addon1" autofocus>
+                </div>
+              </div>
+            </div>
           </div>
-          <label for="">Enter the code sent to +52</label>
-          <a href="" type="button" class="btn btn-default">Resend code</a>
-          <button id="btnNext" type="button" class="btn btn-default" disabled>NEXT</button>
+          <h6>Enter the code sent to </h6>
+          <button id="btnResend" type="button" class="btn btn-default group-container">Resend code</button>
+          <button id="btnNext" type="button" class="btn next-button" disabled>NEXT</button>
         </form>
       </div>
     </main>

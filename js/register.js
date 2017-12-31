@@ -79,6 +79,6 @@ $(document).ready(function() {
     localStorage.lastname = $lastName.val();
     localStorage.email = $email.val();
     // Redirecciona a la vista de confirmación (última vista)
-    window.location.href = '../views/validated.html';
+    window.location.href = 'close.html';
   });
 });
