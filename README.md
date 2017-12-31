@@ -11,7 +11,6 @@ Este repositorio contiene una web-app que replica el sitio de Lyft. El reto cons
 ## Flujo de la aplicación
 1. Splash: `index.html`
 2. Vista principal: `home.html`
- + Opciones: Log In `log-in.html` y Sign up.
 3. Sign Up (solicita número de teléfono): `sign-up.html`
 4. Verify your number (solicita código): `verify.html`
 5. Sign Up (solicita nombre, apellido y correo): `register.html`
