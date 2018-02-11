@@ -11,7 +11,8 @@ body {
 /* Clases reutilizables */
 
 .gradient {
-  background: linear-gradient(rgb(109, 22, 101) 30%, rgb(238, 0, 151) 80%);
+	background: #D80088;
+	background-repeat: no-repeat;
 }
 
 .high {
@@ -23,6 +24,10 @@ body {
 	flex-direction: column;
 	justify-content: space-around;
 	padding: 2em;
+}
+
+.border {
+	border-radius: 2em;
 }
 
 .flex-item {
@@ -60,7 +65,7 @@ body {
 /* Home */
 
 .bg-night {
-	background-image: url('../assets/images/night.jpg');
+	background-image: url('../assets/images/night-mobile.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: auto 100vh;
@@ -70,10 +75,31 @@ body {
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
-	border: 0.1em solid #FFFFFF;
-	color: #FFFFFF;
+.btn-white, .btn-rose {
+	width: 7em;
 	padding: 1em;
+}
+
+.btn-white {
+	background-color: #FFFFFF;
+	color: #D80088;
+}
+
+.btn-rose {
+	background-color: #D80088;
+	color: #FFFFFF;
+}
+
+.btn-white:hover, .btn-white:visited {
+	color: #D80088;
+}
+
+.btn-rose:hover, .btn-rose:visited {
+	color: #FFFFFF;
+}
+
+.btn-white:active, .btn-rose:active {
+	color: rgb(219, 219, 219);
 }
 
 /* Log In*/
@@ -90,4 +116,28 @@ body {
 
 .img-icon {
 	width: 5vh;
+}
+
+@media (min-width: 768px) {
+	picture img {
+		width: 20%;
+		margin-left: 40%;
+	}
+
+	.border {
+		border-radius: 0;
+	}
+
+	.gradient {
+		background: linear-gradient(rgb(109, 22, 101) 20%, rgb(238, 0, 151) 80%);
+	}
+
+	.bg-night {
+		background-image: url('../assets/images/night-desktop.jpg');
+		background-size: 100vw 100vh;
+	}
+
+	.btn-white, .btn-rose {
+		width: 10em;
+	}
 }
