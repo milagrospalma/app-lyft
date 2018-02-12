@@ -40,18 +40,36 @@ body {
 	justify-content: space-around;
 }
 
-.back-button {
+.back-button, .back-button:hover, .back-button:visited {
 	font-size: 1.5em;
-	color: #E719BB;
+	color: #D80088;
+}
+
+.back-button:active {
+	color: #D0D3D4;
 }
 
 .next-button {
-	background-color: #ED1F96;
+	background-color: #D80088;
 	color: #FFFFFF;
-	font-weight: bold;
 	width: 100%;
 	padding: 0.8em;
 	margin: 1em 0;
+}
+
+.next-button:hover {
+	color: #FFFFFF;
+}
+
+.next-button:active, .next-button:visited {
+	color: #D0D3D4;
+}
+
+.next-button:disabled {
+	border: 0.1em solid #CCCCCC;
+	background-color: #EEEEEE;
+	color: #CCCCCC;
+	
 }
 
 .btn-padding {
@@ -99,7 +117,7 @@ body {
 }
 
 .btn-white:active, .btn-rose:active {
-	color: rgb(219, 219, 219);
+	color: #DBDBDB;
 }
 
 /* Log In*/
