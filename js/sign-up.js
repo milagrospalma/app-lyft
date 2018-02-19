@@ -1,14 +1,15 @@
 $(document).ready(function() {
   // Seleccionando elementos
+  var $form = $('.input-group');
+  var $cp = $('#code');
   var $phone = $('#inputPhone');
   var $button = $('#btnNext');
   var $option = $('li');
-
+  
   // Declarando variables
   var MINLENGTH = 10;
   var index = 0;
   var validatedPhone = false;
-  var lengthOfPostalCode = 0;
   var randomNumber = 0;
 
   // Activa el button
@@ -21,47 +22,50 @@ $(document).ready(function() {
     $button.attr('disabled', 'disabled');
   }
 
+  // Valida el ingreso de números
+  function onlyNumber(event) {
+    var REGEXNUMBER = /^[0-9]*$/;
+    var result = REGEXNUMBER.test(event.key);
+    if (result) {
+      validatedPhone = true;
+    } else {
+      validatedPhone = false;
+    }
+    return validatedPhone;
+  };
+
   // Evento para los elementos li: opciones
   $option.on('click', function() {
     index = $(this).data('option');
     switch (true) {
     case index === 0:
       $('<img src="../assets/icons/peru.ico">').replaceAll($('#dropdownMenu :first-child'));
-      $phone.val('51');
+      $cp.text('+51');
       break;
     case index === 1:
       $('<img src="../assets/icons/chile.ico">').replaceAll($('#dropdownMenu :first-child'));
-      $phone.val('52');
+      $cp.text('+52');
       break;
     case index === 2:
       $('<img src="../assets/icons/mexico.ico">').replaceAll($('#dropdownMenu :first-child'));
-      $phone.val('53');
+      $cp.text('+53');
       break;
     }
-    // Agregando clase al ícono seleccionado
     $('img').addClass('img-icon');
-    // Agregando clase al button dropdown
     $('#dropdownMenu').addClass('btn-padding');
-    // Capturando la longitud del valor del input
-    lengthOfPostalCode = $phone.val().length;
-    // Habilitando el input
     $phone.attr('disabled', false);
-    // Enfocando el input
     $phone.focus();
   });
+
+  // Evento para el formulario
+  $form.on('keypress', onlyNumber);
 
   // Evento para el input: Phone
   $phone.on('input', function() {
     var lengthPhone = $(this).val().length;
-    var characters = lengthPhone - lengthOfPostalCode;
-    if (characters === MINLENGTH) {
-      validatedPhone = true;
+    if (lengthPhone === MINLENGTH) {
       onButton();
     } else {
-      if (lengthPhone === 0) {
-        $phone.attr('disabled', 'disabled');
-      }
-      validatedPhone = false;
       offButton();
     }
   });
@@ -73,7 +77,7 @@ $(document).ready(function() {
     randomNumber = Math.floor(Math.random() * 900) + 100;
     // Almacena en el localStorage el código generado
     localStorage.code = randomNumber;
-    localStorage.phone = $phone.val();
+    localStorage.phone = $cp.text() + $phone.val();
     window.location.href = 'verify.html';
   });
 });
