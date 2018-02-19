@@ -55,6 +55,7 @@ body {
 	width: 100%;
 	padding: 0.8em;
 	margin: 1em 0;
+	transition-duration: 1s;
 }
 
 .next-button:hover {
@@ -69,7 +70,6 @@ body {
 	border: 0.1em solid #CCCCCC;
 	background-color: #EEEEEE;
 	color: #CCCCCC;
-	
 }
 
 .btn-padding {
@@ -133,7 +133,15 @@ body {
 }
 
 .img-icon {
-	width: 5vh;
+	width: 30px;
+}
+
+.icon-rose, a {
+	color: #D80088;
+}
+
+a:hover {
+	color: #D80088;
 }
 
 @media (min-width: 768px) {

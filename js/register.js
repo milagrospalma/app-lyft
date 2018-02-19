@@ -1,5 +1,6 @@
 $(document).ready(function() {
   // Seleccionando elementos
+  var $formName = $('#formName');
   var $firstName = $('#firstName');
   var $lastName = $('#lastName');
   var $email = $('input[type=email]');
@@ -16,20 +17,44 @@ $(document).ready(function() {
   var validatedEmail = false;
   var validatedCheckbox = false;
 
-  // Activa el button
   function onButton() {
     if (validatedFirstName && validatedLastName && validatedEmail && validatedCheckbox) {
       $button.attr('disabled', false);
     }
   }
-  // Desactiva el button
+  
   function offButton() {
     $button.attr('disabled', 'disabled');
   }
 
+  function onlyLetters(event) {
+    var REGEXLETTERS = /^[a-zA-Z_áéíóúñ_ÁÉÍÓÚÑ\s]*$/;
+    var result = REGEXLETTERS.test(event.key);
+    var centinel = false;
+    if (result) {
+      centinel = true;
+    } else {
+      centinel = false;
+    }
+    return centinel;
+  };
+
+  function email(event) {
+    var result = REGEXEMAIL.test(event.key);
+    var centinel = false;
+    if (result) {
+      centinel = true;
+    } else {
+      centinel = false;
+    }
+    return centinel;
+  }
+
+  $formName.on('keypress', onlyLetters);
+
   // Evento para el primer input: First Name
   $firstName.on('input', function() {
-    if ($(this).val().length >= MINLENGTH) {
+    if ($(this).val().length >= MINLENGTH && $(this).val().trim() !== '') {
       validatedFirstName = true;
       onButton();
     } else {
@@ -40,7 +65,7 @@ $(document).ready(function() {
 
   // Evento para el segundo input: Last Name
   $lastName.on('input', function() {
-    if ($(this).val().length >= MINLENGTH) {
+    if ($(this).val().length >= MINLENGTH && $(this).val().trim() !== '') {
       validatedLastName = true;
       onButton();
     } else {

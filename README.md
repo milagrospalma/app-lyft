@@ -1,6 +1,6 @@
 # Lyft App
 ## Descripción
-Este repositorio contiene una web-app que replica el sitio de Lyft. El reto consiste en cumplir los pasos necesarios para que el usuario pueda registrarse.
+El repositorio contiene una web-app que replica el sitio de Lyft. El reto consiste en cumplir los pasos necesarios para que el usuario pueda registrarse.
 
 ## Herramientas
 + HTML5

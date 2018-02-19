@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Register</title>
-    <!-- Icons -->
-    <link rel="shortcut icon" href="../assets/icons/logo.ico" type="image/ico">
-    <!-- Import Bootstrap CSS -->
-    <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
-    <!-- main.css -->
-    <link rel="stylesheet" href="../css/main.css">
-  </head>
-  <body class="high">
-    <main>
-      <!-- Botón de regreso -->
-      <div class="return-button">
-        <a href="verify.html" type="button" class="btn back-button">
-          <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-        </a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>App Lyft</title>
+  <link rel="shortcut icon" href="../assets/icons/logo.ico" type="image/ico">
+  <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="high">
+  <main>
+    <!-- Botón de regreso -->
+    <div class="return-button">
+      <a href="verify.html" type="button" class="btn back-button">
+        <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+      </a>
+    </div>
+    <!-- Contenido de la vista Register -->
+    <div class="container-flex-column centered-text">
+      <h1>Sign Up</h1>
+      <h5>Join now for the ride credit</h5>
+      <hr>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-offset-4 col-md-4 col-xs-offset-1 col-xs-10">
+            <div id="formName" class="input-group group-container">
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-user icon-rose"></span>
+              </span>
+              <input id="firstName" type="text" class="form-control" placeholder="First name" aria-describedby="basic-addon1" autofocus>
+              <input id="lastName" type="text" class="form-control" placeholder="Last name" aria-describedby="basic-addon1">
+            </div>
+            <div id="formEmail" class="input-group group-container">
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-envelope icon-rose"></span>
+              </span>
+              <input type="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+            </div>
+            <div class="group-container">
+              <input type="checkbox">
+              <span>I agree to Lyft's
+                <a>Terms of Service</a>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-offset-5 col-md-2 col-xs-12">
+            <button id="btnNext" type="button" class="btn next-button" disabled>
+              <strong>NEXT</strong>
+            </button>
+          </div>
+        </div>
       </div>
-      <!-- Contenido de la vista Register -->
-      <div class="container-flex-column centered-text">
-        <h1>Sign Up</h1>
-        <h5>Join now for the ride credit</h5>
-        <hr>
-        <form>
-          <div class="input-group group-container">
-            <span class="input-group-addon">
-              <span class="glyphicon glyphicon-lock"></span>
-            </span>
-            <input id="firstName" type="text" class="form-control" placeholder="First name" aria-describedby="basic-addon1" autofocus>
-            <input id="lastName" type="text" class="form-control" placeholder="Last name" aria-describedby="basic-addon1">
-          </div>
-          <div class="input-group group-container">
-            <span class="input-group-addon">
-              <span class="glyphicon glyphicon-envelope"></span>
-            </span>
-            <input type="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
-          </div>
-          <div class="group-container">
-            <input type="checkbox">
-            <span>I agree to Lyft's<a>Terms of Service</a></span>
-          </div>
-          <button id="btnNext" type="button" class="btn next-button" disabled>NEXT</button>
-        </form>
-      </div>
-    </main>
-    <!-- Import jQuery -->
-    <script type="text/javascript" src="../vendors/jquery/jquery-3.2.1.min.js"></script>
-    <!-- Import Bootstrap JS -->
-    <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
-    <!-- app.js -->
-    <script type="text/javascript" src="../js/register.js"></script>
-  </body>
+    </div>
+  </main>
+  <script type="text/javascript" src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/register.js"></script>
+</body>
 </html>

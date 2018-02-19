@@ -1,29 +1,40 @@
 $(document).ready(function() {
   // Seleccionando elementos
   var $main = $('main');
+  var $form = $('.input-group');
   var $label = $('h6');
-  var $code = $('input[type=number]');
+  var $code = $('input[type=text]');
   var $button = $('#btnNext');
   var $resend = $('#btnResend');
+  var validatedCode = false;
 
-  // Muestra en un alert el código generado en sign-up
   alert('Tu código: LAB-' + localStorage.code);
-  // Remueve la clase para mostrar el contenido de la vista
-  $main.removeClass('hidden-xs');
-  // Agrega número del sign up
-  $label.append('<strong>+' + localStorage.phone + '</strong>');
 
-  // Activa el button
+  $main.removeClass('hidden');
+
+  $label.append('<strong>' + localStorage.phone + '</strong>');
+
   function onButton() {
     $button.attr('disabled', false);
   }
 
-  // Desactiva el button
   function offButton() {
     $button.attr('disabled', 'disabled');
   }
 
-  // Evento para el input
+  function onlyNumber(event) {
+    var REGEXNUMBER = /^[0-9]*$/;
+    var result = REGEXNUMBER.test(event.key);
+    if (result) {
+      validatedCode = true;
+    } else {
+      validatedCode = false;
+    }
+    return validatedCode;
+  };
+
+  $form.on('keypress', onlyNumber);
+
   $code.on('input', function() {
     if ($(this).val() === localStorage.code) {
       onButton();
