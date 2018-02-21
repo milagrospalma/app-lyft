@@ -1,7 +1,7 @@
 # Lyft App
 El repositorio contiene una web-app que replica el sitio de Lyft. El reto consiste en cumplir los pasos necesarios para que el usuario pueda registrarse.
 
-![Vista 1](assets/docs/1.png)
+![Vista Desktop](https://github.com/milagrospalma/app-lyft/blob/master/assets/docs/desktop.png)
 
 ## Desarrollado para [Laboratoria](http://laboratoria.la)
 
