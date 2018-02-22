@@ -1,7 +1,7 @@
 # Lyft App
 El repositorio contiene una web-app que replica el sitio de Lyft. El reto consiste en cumplir los pasos necesarios para que el usuario pueda registrarse.
 
-![Vista Desktop](https://subefotos.com/ver/?11ae26bb10ac18c24fb8116f1f23738do.png)
+![Vista Desktop](https://fotos.subefotos.com/11ae26bb10ac18c24fb8116f1f23738do.png)
 
 ## Desarrollado para [Laboratoria](http://laboratoria.la)
 
